@@ -67,7 +67,7 @@ schedule.every().hour.do(lambda: predict_price("KRW-XRP"))
 # 로그인
 upbit = pyupbit.Upbit(access, secret)
 print("autotrade start")
-post_message(myToken,"#coin", "자동매매시작")
+post_message(myToken,"#coin", "autotrade start")
 # 자동매매 시작
 while True:
     try:
