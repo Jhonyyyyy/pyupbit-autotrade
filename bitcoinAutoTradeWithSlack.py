@@ -60,17 +60,17 @@ while True:
         end_time = start_time + datetime.timedelta(days=1)
 
         if start_time < now < end_time - datetime.timedelta(seconds=10):
-            target_price = get_target_price("KRW-XRP", 0.5)
+            target_price = get_target_price("KRW-XRP", 0.2)
             ma15 = get_ma15("KRW-XRP")
             current_price = get_current_price("KRW-XRP")
             if target_price < current_price and ma15 < current_price:
                 krw = get_balance("KRW")
                 if krw > 5000:
-                    buy_result = upbit.buy_market_order("KRW-BTC", krw*0.9995)
+                    buy_result = upbit.buy_market_order("KRW-XRP", krw*0.9995)
                     post_message(myToken,"#coin", "XRP buy : " +str(buy_result))
         else:
-            xrp = get_balance("XRP")
-            if xrp > 0.00008:
+            btc = get_balance("XRP")
+            if btc > 0.00008:
                 sell_result = upbit.sell_market_order("KRW-XRP", xpr*0.9995)
                 post_message(myToken,"#coin", "XRP buy : " +str(sell_result))
         time.sleep(1)
