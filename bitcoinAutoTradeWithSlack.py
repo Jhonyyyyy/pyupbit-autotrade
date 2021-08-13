@@ -69,9 +69,9 @@ while True:
                     buy_result = upbit.buy_market_order("KRW-BTC", krw*0.9995)
                     post_message(myToken,"#coin", "XRP buy : " +str(buy_result))
         else:
-            btc = get_balance("XRP")
-            if btc > 0.00008:
-                sell_result = upbit.sell_market_order("KRW-XRP", btc*0.9995)
+            xrp = get_balance("XRP")
+            if xrp > 0.00008:
+                sell_result = upbit.sell_market_order("KRW-XRP", xpr*0.9995)
                 post_message(myToken,"#coin", "XRP buy : " +str(sell_result))
         time.sleep(1)
     except Exception as e:
