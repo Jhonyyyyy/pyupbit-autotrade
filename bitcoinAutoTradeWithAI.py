@@ -5,9 +5,9 @@ import schedule
 import requests
 from fbprophet import Prophet
 
-access = "dCHhpFD2wGuxGkEybEOrEZg1ogUwXMR"
-secret = "xWgUlKSbWzxHgZrJ0JEHMtgxSOMS6yz"
-myToken = "xoxb-2382932486212-2389364946769-9K"
+access = "dCHhpFD2wGuxGkEybEO"
+secret = "xWgUlKSbWzxHgZrJ0JE"
+myToken = "xoxb-2382932486212-"
 
 def post_message(token, channel, text):
     """슬랙 메시지 전송"""
